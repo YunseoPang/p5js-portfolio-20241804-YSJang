@@ -4,7 +4,104 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>p5.js 아카이브 포트폴리오</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 24px;
+      background: #eee8f5; /* 윤서님의 예쁜 연보라색 배경 */
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      color: #1a1a3a;
+      margin-bottom: 10px;
+    }
+
+    header .subtitle {
+      color: #666;
+      font-size: 1.1rem;
+    }
+
+    /* 교수님 가이드라인 2행 2열 레이아웃 완벽 반영 */
+    #projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+      max-width: 800px; /* 설명 칸을 위해 마진 확보 */
+      gap: 30px; /* 카드 사이 간격 */
+    }
+
+    #projects .project-card {
+      display: flex;
+      flex-direction: column;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border: 1px solid #e0d8f0;
+    }
+
+    /* 교수님 전용 iframe 박스 규격 */
+    #projects .cell {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      position: relative;
+      overflow: hidden;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* 교수님 가이드라인 변형 방지 스케일 완벽 정렬 */
+    #projects .cell iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 600px;
+      height: 400px;
+      border: none;
+      transform-origin: top left;
+      transform: scale(0.67); /* 800px 레이아웃에 맞춰 화면 가득 차게 배율 조정 */
+    }
+
+    #projects .info {
+      padding: 15px;
+      background: #fff;
+    }
+
+    #projects .info h3 {
+      font-size: 1rem;
+      color: #222;
+      margin-bottom: 5px;
+    }
+
+    #projects .info p {
+      font-size: 0.85rem;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    footer {
+      margin-top: 5px;
+      padding: 20px;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500;700&display=swap" rel="stylesheet">
@@ -18,7 +115,7 @@
 
   <main id="projects">
 
-    <div class="cell-wrapper">
+    <div class="project-card">
       <div class="cell">
         <iframe src="sample1/index.html" title="과제 1 작품"></iframe>
       </div>
@@ -28,7 +125,7 @@
       </div>
     </div>
 
-    <div class="cell-wrapper">
+    <div class="project-card">
       <div class="cell">
         <iframe src="sample4/index.html" title="과제 4 작품"></iframe>
       </div>
@@ -38,7 +135,7 @@
       </div>
     </div>
 
-    <div class="cell-wrapper">
+    <div class="project-card">
       <div class="cell">
         <iframe src="sample2/index.html" title="과제 2 작품"></iframe>
       </div>
@@ -48,7 +145,7 @@
       </div>
     </div>
 
-    <div class="cell-wrapper">
+    <div class="project-card">
       <div class="cell">
         <iframe src="sample3/index.html" title="과제 3 작품"></iframe>
       </div>
