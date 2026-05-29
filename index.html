@@ -20,7 +20,7 @@
 
     <div class="cell">
       <div class="iframe-container">
-        <iframe id="frame1" title="과제 1 작품"></iframe>
+        <iframe src="sample1/index.html" title="과제 1 작품"></iframe>
       </div>
       <div class="info">
         <h3>Project 01. 추상화 그리기</h3>
@@ -30,7 +30,7 @@
 
     <div class="cell">
       <div class="iframe-container">
-        <iframe id="frame4" title="과제 4 작품"></iframe>
+        <iframe src="sample4/index.html" title="과제 4 작품"></iframe>
       </div>
       <div class="info">
         <h3>Project 04. 자신의 추상화에 시간에 따른 움직임 넣기</h3>
@@ -40,7 +40,7 @@
 
     <div class="cell">
       <div class="iframe-container">
-        <iframe id="frame2" title="과제 2 작품"></iframe>
+        <iframe src="sample2/index.html" title="과제 2 작품"></iframe>
       </div>
       <div class="info">
         <h3>Project 02. 캐릭터 그리기</h3>
@@ -50,7 +50,7 @@
 
     <div class="cell">
       <div class="iframe-container">
-        <iframe id="frame3" title="과제 3 작품"></iframe>
+        <iframe src="sample3/index.html" title="과제 3 작품"></iframe>
       </div>
       <div class="info">
         <h3>Project 03. 움직이는 캐릭터 그리기</h3>
@@ -63,24 +63,6 @@
   <footer>
     <p>© 2026 장윤서 All Rights Reserved. Powered by GitHub Pages.</p>
   </footer>
-
-  <script>
-    // 현재 인터넷 주소창의 base 주소를 자동으로 따와서 경로를 강제 연동하는 치트키 스크립트
-    const basePath = window.location.pathname.endsWith('/') ? window.location.pathname : window.location.pathname + '/';
-    
-    // 대소문자 방 이름을 둘 다 체크해서 무조건 로드되도록 우회
-    document.getElementById('frame1').src = basePath + 'sample1/index.html';
-    document.getElementById('frame1').onerror = () => { document.getElementById('frame1').src = basePath + 'Sample1/index.html'; };
-
-    document.getElementById('frame2').src = basePath + 'sample2/index.html';
-    document.getElementById('frame2').onerror = () => { document.getElementById('frame2').src = basePath + 'Sample2/index.html'; };
-
-    document.getElementById('frame3').src = basePath + 'sample3/index.html';
-    document.getElementById('frame3').onerror = () => { document.getElementById('frame3').src = basePath + 'Sample3/index.html'; };
-
-    document.getElementById('frame4').src = basePath + 'sample4/index.html';
-    document.getElementById('frame4').onerror = () => { document.getElementById('frame4').src = basePath + 'Sample4/index.html'; };
-  </script>
 
 </body>
 </html>
